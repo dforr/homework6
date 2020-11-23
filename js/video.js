@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
-	document.querySelector("#volume").innerHTML = volume.value + "%";
+	document.querySelector("#volume").innerHTML = (video.volume *100) + "%";
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -38,38 +38,6 @@ document.querySelector("#skip").addEventListener("click", function() {
 	video.play()
 });
 
-/*document.querySelector("#mute").addEventListener("click", mute);
-mute.onclick = function() {
-
-if (video.muted) {
-	video.muted = false;
-	mute.innerHTML = 'Mute';
-	}
-else {
-	video.muted = true;
-	mute.innerHTML = 'Unmute'
-	}
-};
-document.getElementById("mute").addEventListener("click", function() {
-	if (video.muted = false) { 
-		video.muted = true;
-		document.getElementById('unmute').innerHTML = "Unmute";
-	}
-	else 
-	{
-		video.muted = false;
-		document.getElementById('mute').innerHTML = "Mute";
-	}
-
-
-document.querySelector("mute").addEventListener("click", function() {
-	if (video.muted){ 
-		video.muted = false; document.querySelector("#mute").innerHTML = "Mute";
-	}
-	else {
-		video.muted = true; document.querySelector("#mute").innerHTML = "Unmute";	
-});
-*/
 document.getElementById('mute').addEventListener('click', mute);
 mute.onclick = function(){
 	if(video.muted){
